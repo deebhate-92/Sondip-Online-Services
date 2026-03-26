@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sondip Online Services CSC Jalgaon | PAN, Aadhaar, Loan, RTO</title>
+
+<meta name="description" content="CSC Center in Jalgaon providing PAN Card, Aadhaar Update, Voter ID, Loan, Insurance, RTO and Passport Services. Fast and reliable service.">
+<meta name="keywords" content="CSC Jalgaon, PAN Card Jalgaon, Aadhaar Update Jalgaon, RTO Services, Passport Service, Loan, Insurance">
+<meta name="author" content="Sondip Online Services CSC">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+  font-family:'Poppins', sans-serif;
+  margin:0;
+  background:#f5f6fa;
+}
+
+/* ===== TOP HEADER ICONS ===== */
+.topbar {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:8px 20px;
+  background:#ffffff;
+}
+
+.topbar img {
+  height:40px;
+}
+
+/* ===== HEADER ===== */
+.header-text {
+  background:linear-gradient(90deg,#0a3d62,#3c6382);
+  color:white;
+  text-align:center;
+  padding:15px;
+}
+
+/* ===== NAVBAR ===== */
+nav {
+  background:#1e3799;
+  padding:12px;
+  text-align:center;
+}
+nav a {
+  color:white;
+  margin:15px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* ===== HERO ===== */
+.hero {
+  padding:40px;
+  text-align:center;
+}
+
+/* ===== GRID ===== */
+.container {padding:20px;}
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:15px;
+}
+.card {
+  background:white;
+  padding:20px;
+  border-radius:15px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+  text-align:center;
+}
+
+/* ===== BUTTON ===== */
+button {
+  padding:10px 15px;
+  background:#0a3d62;
+  color:white;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+/* ===== FORM ===== */
+.form-section {
+  background:white;
+  padding:20px;
+  margin:20px;
+  border-radius:10px;
+}
+input, select {
+  width:100%;
+  padding:10px;
+  margin:8px 0;
+  border-radius:5px;
+  border:1px solid #ccc;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background:#0a3d62;
+  color:white;
+  text-align:center;
+  padding:15px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ✅ TOP CSC LOGOS -->
+<div class="topbar">
+  <img src="images/csc.png">
+  <img src="images/maha.png">
+  <img src="images/aple.png">
+  <img src="images/digital.png">
+</div>
+
+<!-- ✅ TITLE -->
+<div class="header-text">
+  <h1>Sondip Online Services (CSC) Jalgaon</h1>
+  <p>All Government & Online Services at One Place</p>
+</div>
+
+<!-- ✅ NAVBAR -->
+<nav>
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<!-- ✅ HERO -->
+<section id="home" class="hero">
+  <h1>Welcome to Sondip Online Services Jalgaon</h1>
+  <p>Fast, reliable and affordable Government, Insurance, Loan, RTO & Passport Services</p>
+</section>
+
+<!-- ✅ SERVICES -->
+<div class="container">
+<h2>Our Services</h2>
+
+<div class="grid" id="services">
+<div class="card"><h3>PAN Card</h3><button onclick="scrollToForm()">Apply</button></div>
+<div class="card"><h3>Aadhar</h3><button onclick="scrollToForm()">Apply</button></div>
+<div class="card"><h3>Udyam Aadhaar</h3><button onclick="scrollToForm()">Apply</button></div>
+<div class="card"><h3>Shop Act Licence</h3><button onclick="scrollToForm()">Apply</button></div>
+<div class="card"><h3>Gazette Certificate</h3><button onclick="scrollToForm()">Apply</button></div>
+<div class="card"><h3>Voter ID</h3><button onclick="scrollToForm()">Apply</button></div>
+<div class="card"><h3>Insurance</h3><button onclick="scrollToForm()">Apply</button></div>
+<div class="card"><h3>Loan</h3><button onclick="scrollToForm()">Apply</button></div>
+<div class="card"><h3>RTO</h3><button onclick="scrollToForm()">Apply</button></div>
+<div class="card"><h3>Passport</h3><button onclick="scrollToForm()">Apply</button></div>
+<div class="card"><h3>Online Form Filling</h3><button onclick="scrollToForm()">Apply</button></div>
+</div>
+
+</div>
+
+<!-- ✅ FORM -->
+<div class="form-section" id="form">
+<h2>Apply for Service</h2>
+
+<form onsubmit="sendToWhatsApp(event)">
+<input type="text" id="name" placeholder="Full Name" required>
+<input type="text" id="mobile" placeholder="Mobile Number" required>
+
+<select id="service" onchange="updateSubService()" required>
+<option value="">Select Service</option>
+<option value="PAN Card">PAN Card</option>
+<option value="Aadhaar">Aadhaar</option>
+<option value="Udyam Aadhaar">Udyam Aadhaar</option>
+<option value="Shop Act Licence">Shop Act Licence</option>
+<option value="Gazette Certificate">Gazette Certificate</option>
+<option value="Voter ID">Voter ID</option>
+<option value="Online Form Filling">Online Form Filling</option>
+<option value="Insurance">Insurance</option>
+<option value="Loan">Loan</option>
+<option value="RTO">RTO</option>
+<option value="Passport">Passport</option>
+</select>
+
+<select id="subservice" required>
+<option value="">Select Service Type</option>
+</select>
+
+<button type="submit">Submit & WhatsApp</button>
+</form>
+</div>
+
+<!-- ✅ CONTACT SECTION -->
+<div class="container" id="contact">
+  <h2>Contact Us</h2>
+
+  <div class="card" style="text-align:left;">
+    <p><b>Name:</b> Deepak P Bhate</p>
+    <p><b>Mobile:</b> 9359389202</p>
+    <p><b>Email:</b> sondip2022@yahoo.com</p>
+    <p><b>Address:</b> Sudhakar Nagar,Back Side of Vinuj World MIDC Area, Jalgaon 425003</p>
+  </div>
+</div>
+
+<!-- ✅ FOOTER -->
+<footer>
+<p>© 2026 Sondip Online Services CSC</p>
+</footer>
+
+<script>
+function scrollToForm() {
+  document.getElementById('form').scrollIntoView({behavior:'smooth'});
+}
+
+function updateSubService() {
+  var service = document.getElementById('service').value;
+  var sub = document.getElementById('subservice');
+
+  sub.innerHTML = '<option value="">Select Service Type</option>';
+
+  switch(service) {
+
+    case 'PAN Card':
+      sub.innerHTML += `
+        <option>New PAN Card</option>
+        <option>PAN Correction</option>
+        <option>Duplicate PAN</option>
+      `;
+      break;
+
+    case 'Aadhaar':
+      sub.innerHTML += `
+        <option>Aadhaar Update</option>
+        <option>Mobile Number Link</option>
+        <option>Address Update</option>
+        <option>Download e-Aadhaar</option>
+      `;
+      break;
+
+    case 'Voter ID':
+      sub.innerHTML += `
+        <option>New Voter ID Registration</option>
+        <option>Correction in Voter ID</option>
+        <option>Address Change</option>
+        <option>Duplicate Voter ID</option>
+        <option>Delete Name</option>
+      `;
+      break;
+
+    case 'Online Form Filling':
+      sub.innerHTML += `
+        <option>Scholarship Form</option>
+        <option>Exam Form</option>
+        <option>Government Job Form</option>
+        <option>College Admission Form</option>
+        <option>Online Registration</option>
+      `;
+      break;
+
+    case 'Insurance':
+      sub.innerHTML += `
+        <option>Life Insurance</option>
+        <option>Health Insurance</option>
+        <option>Vehicle Insurance</option>
+        <option>Crop Insurance</option>
+      `;
+      break;
+
+    case 'Loan':
+      sub.innerHTML += `
+        <option>Personal Loan</option>
+        <option>Home Loan</option>
+        <option>Business Loan</option>
+        <option>Vehicle Loan</option>
+        <option>Education Loan</option>
+      `;
+      break;
+
+    // ✅ UPDATED RTO SECTION (YOUR CUSTOM LIST)
+    case 'RTO':
+      sub.innerHTML += `
+        <option>Pay Your Tax (Green Tax)</option>
+        <option>Transfer of Ownership</option>
+        <option>Address Change (BH Series)</option>
+        <option>Address Change (State Series)</option>
+        <option>Fitness Renewal</option>
+        <option>Application for NOC</option>
+        <option>Renewal of Registration (Private Car)</option>
+        <option>RC Particular</option>
+        <option>Hypothecation Addition</option>
+        <option>Hypothecation Termination</option>
+        <option>Duplicate RC</option>
+        <option>Fancy Number (choice number)</option>
+      `;
+      break;
+
+    case 'Passport':
+      sub.innerHTML += `
+        <option>New Passport</option>
+        <option>Passport Renewal</option>
+        <option>Correction in Passport</option>
+        <option>Tatkal Passport</option>
+      `;
+      break;
+
+    case 'Udyam Aadhaar':
+      sub.innerHTML += `
+        <option>New Udyam Registration</option>
+        <option>Udyam Update</option>
+        <option>Udyam Re-Print Certificate</option>
+  `    ;
+      break;
+    
+   case 'Shop Act Licence':
+     sub.innerHTML += `
+       <option>New Shop Act Registration</option>
+       <option>Renewal of Shop Act</option>
+       <option>Shop Act Update</option>
+       <option>Duplicate Shop Act Certificate</option>
+  `   ;
+     break;
+  
+  case 'Gazette Certificate':
+    sub.innerHTML += `
+      <option>Name Change Gazette</option>
+      <option>Marriage Name Change</option>
+      <option>Correction in Documents</option>
+      <option>Gazette Certificate Download</option>
+  `  ;
+    break;
+
+default:
+      sub.innerHTML = '<option value="">Select Service Type</option>';
+  }
+}
+
+function sendToWhatsApp(event) {
+  event.preventDefault();
+  var name = document.getElementById('name').value;
+  var mobile = document.getElementById('mobile').value;
+  var service = document.getElementById('service').value;
+  var subservice = document.getElementById('subservice').value;
+
+  var message = `Hello, I want ${service} (${subservice}) service.\nName: ${name}\nMobile: ${mobile}`;
+
+  var url = "https://wa.me/919359389202?text=" + encodeURIComponent(message);
+  window.open(url, '_blank');
+}
+</script>
+
+</body>
+</html>
